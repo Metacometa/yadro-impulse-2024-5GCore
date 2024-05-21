@@ -12,4 +12,4 @@ jobs:
 
       - name: Build
         run: |
-          g++ src/.cpp src/club_logic/.cpp src/utils/*.cpp -Iinclude/club_logic -Iinclude/utils -o task.exe
+          g++ src/*.cpp src/club_logic/*.cpp src/utils/*.cpp -Iinclude/club_logic -Iinclude/utils -o task.exe
