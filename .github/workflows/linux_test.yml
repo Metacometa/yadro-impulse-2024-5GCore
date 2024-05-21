@@ -1,0 +1,19 @@
+name: Linux test
+
+on:
+  push:
+    branches: ["master"]
+    
+env:
+  APP_NAME: yadro_test    
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          g++ src/.cpp src/club_logic/.cpp src/utils/*.cpp -Iinclude/club_logic -Iinclude/utils -o task.exe
